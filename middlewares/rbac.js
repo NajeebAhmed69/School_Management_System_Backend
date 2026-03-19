@@ -1,3 +1,4 @@
+//This is RBAC (Role-Based Access Control) middleware
 // Usage: rbac(['admin','teacher'])
 exports.rbacMiddleware = (allowedRoles = []) => (req, res, next) => {
   if (!req.user) return res.status(401).json({ error: 'Unauthorized' });
